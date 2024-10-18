@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Toggle Account And Password</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="tab-buttons">
+        <button id="accountButton" class="account-button">
+          Account
+        </button>
+        <button id="passwordButton" class="password-button">
+          Password
+        </button>
+      </div>
+      <div class="contents">
+        <div class="account-contents">
+          <h1>Account</h1>
+          <p>Make changes to your account here. Click save when you're done.</p>
+          <form action="form-area">
+            <div class="input-area">
+              <label for="name">Name:</label>
+              <input id="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="input-area">
+              <label for="username">Username:</label>
+              <input id="username" type="text" required autocomplete="username" />
+            </div>
+            <button class="save-btn" type="submit">Save Changes</button>
+          </form>
+        </div>
+        <div class="password-contents" style="display: none;">
+          <h1>Password</h1>
+          <p>Change your password here. After saving, you'll be logged out.</p>
+          <form action="form-area">
+            <div class="input-area">
+              <label for="old-password">Current Password:</label>
+              <input id="old-password" type="password" required autocomplete="current-password" />
+            </div>
+            <div class="input-area">
+              <label for="new-password">New Password:</label>
+              <input id="new-password" type="password" required autocomplete="new-password" />
+            </div>
+            <button class="save-btn" type="submit">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

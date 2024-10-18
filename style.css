@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #001f3f;
+}
+
+body {
+  background: #f9f7f7;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+p {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+form {
+  margin-top: 10px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  height: 84vh;
+  align-items: center;
+  color: #001f3f;
+  overflow: hidden;
+}
+
+.tab-buttons {
+  display: flex;
+  padding: 10px;
+  gap: 60px;
+  margin-bottom: 20px;
+  background: #dbe2ef;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.tab-buttons.active {
+  transform: translateX(100px);
+}
+
+.tab-buttons button {
+  background: #001f3f;
+  color: #dbe2ef;
+  border: 1px solid #dbe2ef;
+  border-radius: 10px;
+  padding: 10px 90px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.active {
+  background: #dbe2ef;
+  color: #001f3f;
+}
+
+.contents {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  padding-left: 50px;
+  padding-right: 40px;
+  padding-top: 50px;
+  max-width: 600px;
+  background: #dbe2ef;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-area input {
+  padding: 6px;
+  border: none;
+  font-size: 19px;
+}
+
+.save-btn {
+  background: #001f3f;
+  color: #dbe2ef;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.save-btn:hover {
+  background: #f9f7f7;
+  color: #001f3f;
+  font-weight: bolder;
+  transition: all 300ms ease-in-out;
+}
+
+.account-button .password-button {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.account-button:hover {
+  background: #f9f7f7;
+  color: #112d4e;
+  border: none;
+  transition: all 300ms ease-in-out;
+  font-weight: bolder;
+}
+
+.password-button:hover {
+  background: #f9f7f7;
+  color: #112d4e;
+  border: none;
+  transition: all 300ms ease-in-out;
+  font-weight: bolder;
+}
+
+.input-area input[type="password"] {
+  color: #112d4e;
+}
+
+.input-area:nth-child(2) input[type="text"] {
+  color: #112d4e;
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.bg {
+  background-color: #001f3f;
+  color: #dbe2ef;
+  border: none;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #001f3f;
+  }
+  50% {
+    color: #dbe2ef;
+  }
+  100% {
+    color: #001f3f;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .tab-buttons {
+    gap: 30px;
+  }
+
+  .tab-buttons button {
+    padding: 10px 50px;
+    font-size: 18px;
+  }
+
+  .contents {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .tab-buttons {
+    gap: 20px;
+  }
+
+  .tab-buttons button {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+
+  .contents {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .tab-buttons {
+    gap: 10px;
+  }
+
+  .tab-buttons button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .contents {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+}
