@@ -1,22 +1,3 @@
-function toggleItem(itemClass) {
-  const accountContents = document.querySelector('.account-contents');
-  const passwordContents = document.querySelector('.password-contents');
-  const accountButton = document.querySelector("#accountButton");
-  const passwordButton = document.querySelector("#passwordButton");
-
-  if (itemClass === 'account-contents') {
-    accountContents.style.display = 'block';
-    passwordContents.style.display = 'none';
-    accountButton.classList.add("active");
-    passwordButton.classList.remove("active");
-  } else if (itemClass === 'password-contents') {
-    accountContents.style.display = 'none';
-    passwordContents.style.display = 'block';
-    accountButton.classList.remove("active");
-    passwordButton.classList.add("active");
-  }
-}
-
 document.addEventListener("DOMContentLoaded", function() {
   const accountContents = document.querySelector('.account-contents');
   const passwordContents = document.querySelector('.password-contents');
@@ -26,10 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
   if (accountContents && passwordContents && accountButton && passwordButton) {
     accountContents.style.display = 'block';
     passwordContents.style.display = 'none';
-    accountButton.classList.add("bg");
-    accountButton.classList.add("active");
-
-    passwordButton.classList.remove("bg");
+    accountButton.classList.add("bg", "active");
+    passwordButton.classList.remove("bg", "active");
 
     accountButton.addEventListener("click", function() {
       toggleItem("account-contents");
@@ -42,3 +21,22 @@ document.addEventListener("DOMContentLoaded", function() {
     console.error("One or more elements not found");
   }
 });
+
+function toggleItem(item) {
+  const accountContents = document.querySelector('.account-contents');
+  const passwordContents = document.querySelector('.password-contents');
+  const accountButton = document.querySelector("#accountButton");
+  const passwordButton = document.querySelector("#passwordButton");
+
+  if (item === "account-contents") {
+    accountContents.style.display = 'block';
+    passwordContents.style.display = 'none';
+    accountButton.classList.add("bg", "active");
+    passwordButton.classList.remove("bg", "active");
+  } else if (item === "password-contents") {
+    accountContents.style.display = 'none';
+    passwordContents.style.display = 'block';
+    accountButton.classList.remove("bg", "active");
+    passwordButton.classList.add("bg", "active");
+  }
+}
