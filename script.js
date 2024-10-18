@@ -1,4 +1,3 @@
-// Function to toggle between account and password views
 function toggleItem(itemClass) {
   const accountContents = document.querySelector('.account-contents');
   const passwordContents = document.querySelector('.password-contents');
@@ -18,7 +17,6 @@ function toggleItem(itemClass) {
   }
 }
 
-// The account view is displayed by default
 document.addEventListener("DOMContentLoaded", function() {
   const accountContents = document.querySelector('.account-contents');
   const passwordContents = document.querySelector('.password-contents');
@@ -33,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     passwordButton.classList.remove("bg");
 
-    // Add event listeners to the buttons
     accountButton.addEventListener("click", function() {
       toggleItem("account-contents");
     });
